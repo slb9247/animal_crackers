@@ -1,0 +1,150 @@
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #cc6666;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+/*
+ * Boring
+ */
+.hamburger--boring .hamburger-inner, .hamburger--boring .hamburger-inner::before, .hamburger--boring .hamburger-inner::after {
+  transition-property: none; }
+.hamburger--boring.is-active .hamburger-inner {
+  transform: rotate(45deg); }
+  .hamburger--boring.is-active .hamburger-inner::before {
+    top: 0;
+    opacity: 0; }
+  .hamburger--boring.is-active .hamburger-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg); }
+
+/* ---------- GENERAL ---------- */
+* {
+  margin: 0 auto;
+  padding: 0;
+  text-decoration: none;
+  list-style: none; }
+
+.hide {
+  overflow: hidden; }
+
+/* ---------- LINKS ---------- */
+a:link {
+  color: #000; }
+
+a:visited {
+  color: #000; }
+
+a:hover {
+  color: #000; }
+
+a:active {
+  color: #000; }
+
+/* ---------- BANNERS ---------- */
+#banner-home {
+  height: 350px;
+  background-image: url("../images/dog.png");
+  background-size: cover;
+  background-position: center; }
+
+/* ---------- NAV ---------- */
+nav {
+  text-align: center; }
+  nav .menu-main {
+    display: none; }
+    @media (min-width: 480px) {
+      nav .menu-main {
+        display: block; } }
+    nav .menu-main li {
+      display: inline-block;
+      padding: 20px; }
+    nav .menu-main a {
+      font-size: 22px; }
+  nav .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #cc9966;
+    opacity: 0.8;
+    z-index: 2; }
+    @media (min-width: 480px) {
+      nav .menu-overlay {
+        display: none !important; } }
+    nav .menu-overlay .menu-overlayContent {
+      position: relative;
+      top: 25%; }
+      nav .menu-overlay .menu-overlayContent li {
+        padding: 20px; }
+      nav .menu-overlay .menu-overlayContent a {
+        font-size: 22px; }
+
+.hamburger {
+  float: right; }
+  @media (min-width: 480px) {
+    .hamburger {
+      display: none; } }
+
+.is-active {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  z-index: 3; }
+
+/* ---------- PAGES GENERAL ---------- */
+.main-page {
+  min-height: 500px;
+  background: linear-gradient(to bottom, rgba(255, 204, 153, 0), #ffcc99); }
+
+/* ---------- HOME ---------- */
+/* ---------- FOOTER ---------- */
+
+/*# sourceMappingURL=main.css.map */

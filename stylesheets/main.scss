@@ -1,0 +1,135 @@
+//@media screen and (min-width:320px){} // mobile portrait
+//@media screen and (min-width:480px){} // mobile landscape
+//@media screen and (min-width:768px){} // ipad portrait
+//@media screen and (min-width:1024px){} // browser, ipad landscape
+//@media screen and (min-width:1200px){} // browser
+//@media screen and (min-width:1600px){} // browser
+
+$hamburger-layer-color: #cc6666;
+@import 'hamburgers/hamburgers';
+
+/* ---------- GENERAL ---------- */
+* {
+  margin: 0 auto;
+  padding: 0;
+  text-decoration: none; // links
+  list-style: none; // lists
+}
+
+.hide {
+  overflow: hidden;
+}
+
+/* ---------- LINKS ---------- */
+a:link {
+  color: #000;
+}
+
+a:visited {
+  color: #000;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:active {
+  color: #000;
+}
+
+/* ---------- BANNERS ---------- */
+#banner-home {
+  height: 350px;
+  background-image: url('../images/dog.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/* ---------- NAV ---------- */
+nav {
+  text-align: center;
+
+  .menu-main {
+    display: none;
+
+    @media (min-width: 480px) {
+      display: block;
+    }
+
+    ul {
+
+    }
+
+    li {
+      display: inline-block;
+      padding: 20px;
+    }
+
+    a {
+      font-size: 22px;
+    }
+  }
+
+  .menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #cc9966;
+    opacity: 0.8;
+    z-index: 2;
+
+    @media (min-width: 480px) {
+      display: none !important;
+    }
+
+    .menu-overlayContent {
+      position: relative;
+      top: 25%; // CHANGE
+
+      ul {
+
+      }
+
+      li {
+        padding: 20px;
+      }
+
+      a {
+        font-size: 22px;
+      }
+    }
+  } // end menu-drop
+} // end nav
+
+
+
+.hamburger {
+  float: right; // change to .is-active properties?
+
+  @media (min-width: 480px) {
+    display: none;
+  }
+}
+
+.is-active {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  z-index: 3;
+}
+
+/* ---------- PAGES GENERAL ---------- */
+.main-page {
+  min-height: 500px;
+  background: linear-gradient(to bottom, rgba(255,204,153,0), rgba(255,204,153,1));
+}
+
+/* ---------- HOME ---------- */
+
+
+/* ---------- FOOTER ---------- */
