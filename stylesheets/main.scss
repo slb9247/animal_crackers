@@ -45,6 +45,16 @@ a:active {
   background-position: center;
 }
 
+#banner-grooming {
+  @extend #banner-home;
+  background-image: url('../images/cat.png');
+}
+
+#banner-shop {
+  @extend #banner-home;
+  background-image: url('../images/bird.png');
+}
+
 
 
 /* ---------- NAV ---------- */
@@ -68,6 +78,7 @@ nav {
     }
 
     a {
+      font-weight: 400;
       font-size: 22px;
     }
   }
@@ -106,10 +117,15 @@ nav {
   } // end menu-drop
 } // end nav
 
-
+.current-link {
+  border-bottom: 1px solid #cc6666;
+}
 
 .hamburger {
-  float: right; // change to .is-active properties?
+  position: absolute;
+  right: 10px;
+  top: 20px;
+
 
   @media (min-width: 480px) {
     display: none;
@@ -130,6 +146,33 @@ nav {
 }
 
 /* ---------- HOME ---------- */
+#main-home {
+
+  h1 {
+    font-weight: 700;
+    text-align: center;
+    margin: 50px 0px 20px;
+  }
+
+  p {
+    font-weight: 400;
+    padding: 0px 20px;
+    text-align: justify;
+    max-width: 450px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ---------- FOOTER ---------- */
