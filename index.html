@@ -50,9 +50,51 @@
 
 
 
+      </div> <!-- end #main-home -->
 
+      <div id="footer-extras">
 
-      </div>
+        <div id="hours">
+          <ul>
+            <li>Mon-Fri <span>10am - 6pm</span></li>
+            <li>Sat <span>9am - 4pm</span></li>
+            <li>Sun <span>closed</span></li>
+          </ul>
+        </div>
+
+        <div id="contact">
+          <div id="number">
+            <p>(717)-738-8033</p>
+          </div>
+
+          <div id="address">
+            <p>
+              754 East Main Street
+              <br>
+              Ephrata, PA
+            </p>
+          </div>
+        </div> <!-- end #contact -->
+
+        <div id="map">
+          <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+          <!-- <div style='overflow:hidden;height:300px;width:400px;'> -->
+            <div id='gmap_canvas' style='height:250px;width:300px;'></div>
+            <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+          </div>
+          <script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(40.16708209999999,-76.1638145),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(40.16708209999999,-76.1638145)});infowindow = new google.maps.InfoWindow({content:'<strong>Animal Crackers</strong><br>754 East Main St, Ephrata PA<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+          </script>
+        </div> <!-- end #map -->
+
+      </div> <!-- end #footer-extras -->
+
+      <footer>
+        <p>
+          &copy; 2016 Animal Crackers. All Rights Reserved.
+          <br>
+          Website Design By Samantha Bolotine
+        </p>
+      </footer>
 
     </body>
 </html>
