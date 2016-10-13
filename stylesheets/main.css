@@ -229,10 +229,6 @@ nav {
 #map {
   margin-top: 15px; }
 
-@media (min-width: 768px) {
-  #gmap_canvas {
-    width: 600px !important; } }
-
 footer {
   background-color: #ffcc99;
   text-align: center;
