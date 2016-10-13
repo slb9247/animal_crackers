@@ -7,8 +7,6 @@ $(document).on('ready', function() {
       $('body').toggleClass('hide');
     });
 
-
-
     // if($('.hamburger').css('display') == 'none') {
     //   $('.menu-overlay').fadeOut('slow');
     // }

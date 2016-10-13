@@ -226,6 +226,12 @@ nav {
   #contact #number {
     margin-bottom: 10px; }
 
+#map {
+  text-align: center;
+  padding: 15px 0px; }
+  #map iframe {
+    max-width: 750px; }
+
 footer {
   background-color: #ffcc99;
   text-align: center;

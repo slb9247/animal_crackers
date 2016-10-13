@@ -249,16 +249,15 @@ nav {
   }
 }
 
-// #map {
-//   margin-top: 15px;
-// }
-//
-// #gmap_canvas {
-//
-//   @media (min-width: 768px) {
-//     width: 600px !important;
-//   }
-// }
+#map {
+  text-align: center;
+  padding: 15px 0px;
+
+  iframe {
+    max-width: 750px;
+   }
+}
+
 
 footer {
   background-color: #ffcc99;
