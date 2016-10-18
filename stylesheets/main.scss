@@ -40,21 +40,21 @@ a:active {
 /* ---------- BANNERS ---------- */
 #banner-home {
   height: 350px;
-  background-image: url('../images/dog.png');
+  background-image: url('../images/dog2.png');
   background-size: cover;
   background-position: center;
 }
 
 #banner-grooming {
   @extend #banner-home;
-  background-image: url('../images/cat.png');
+  background-image: url('../images/cat2.png');
 }
 
 #banner-shop {
   @extend #banner-home;
-  background-image: url('../images/bird.png');
+  background-image: url('../images/bird2.png');
+  background-position: right;
 }
-
 
 /* ---------- NAV ---------- */
 nav {
@@ -112,17 +112,24 @@ nav {
         font-size: 1.4em;
       }
     }
-  } // end menu-drop
+  } // end menu-overlay
 } // end nav
 
 .current-link {
   border-bottom: 1px solid #cc6666;
 }
 
+.mobileNavBar {
+  height: 58px;
+
+   @media (min-width: 480px) {
+     display: none;
+   }
+}
+
 .hamburger {
   position: absolute;
   right: 10px;
-  top: 20px;
 
   @media (min-width: 480px) {
     display: none;
@@ -131,15 +138,15 @@ nav {
 
 .is-active {
   position: absolute;
-  top: 20px;
   right: 10px;
   z-index: 3;
 }
 
 /* ---------- PAGES GENERAL ---------- */
 .main-page {
-  min-height: 1500px; // change back to 500
+  min-height: 500px; // change back to 500
   background: linear-gradient(to bottom, rgba(255,204,153,0), rgba(255,204,153,1));
+  padding-bottom: 100px; // WHAT THE FUCKKKK
 
   h1 {
     font-weight: 700;
@@ -156,7 +163,29 @@ nav {
 }
 
 /* ---------- HOME ---------- */
+#team {
+  text-align: center;
+  margin-top: 50px;
 
+  .teamPic {
+    margin-bottom: 50px;
+    position: relative;
+
+    img:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.teamText {
+  //opacity: 0; // display on hover
+  position: absolute;
+  top: calc(50% - 9.5px); // 9.5px is half of 19px = H3
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1000;
+}
 
 /* ---------- GROOMING ---------- */
 #pricing-grooming {
