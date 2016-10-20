@@ -70,9 +70,6 @@
   text-decoration: none;
   list-style: none; }
 
-.hide {
-  overflow: hidden; }
-
 /* ---------- LINKS ---------- */
 a:link {
   color: #000; }
@@ -102,7 +99,13 @@ a:active {
 
 /* ---------- NAV ---------- */
 nav {
-  text-align: center; }
+  text-align: center;
+  margin: 20px 10px 0px 0px;
+  /* end .menu-overlay */ }
+  @media (min-width: 768px) {
+    nav {
+      margin-top: 30px;
+      float: right; } }
   nav .menu-main {
     display: none; }
     @media (min-width: 480px) {
@@ -110,10 +113,10 @@ nav {
         display: block; } }
     nav .menu-main li {
       display: inline-block;
-      padding: 20px; }
+      padding: 15px; }
     nav .menu-main a {
       font-weight: 400;
-      font-size: 1.4em; }
+      font-size: 1.3em; }
   nav .menu-overlay {
     display: none;
     position: fixed;
@@ -134,10 +137,12 @@ nav {
       nav .menu-overlay .menu-overlayContent a {
         font-size: 1.4em; }
 
+/* end nav */
 .current-link {
   border-bottom: 1px solid #cc6666; }
 
 .mobileNavBar {
+  display: inline-block;
   height: 58px; }
   @media (min-width: 480px) {
     .mobileNavBar {
@@ -156,6 +161,22 @@ nav {
   z-index: 3; }
 
 /* ---------- PAGES GENERAL ---------- */
+.logo-mobile {
+  display: inline-block; }
+  @media (min-width: 480px) {
+    .logo-mobile {
+      display: none; } }
+
+.logo-desktop {
+  display: none; }
+  @media (min-width: 480px) {
+    .logo-desktop {
+      display: block;
+      text-align: center; } }
+  @media (min-width: 768px) {
+    .logo-desktop {
+      display: inline-block; } }
+
 .main-page {
   min-height: 500px;
   background: linear-gradient(to bottom, rgba(255, 204, 153, 0), #ffcc99);
@@ -175,18 +196,24 @@ nav {
   text-align: center;
   margin-top: 50px; }
   #team .teamPic {
-    margin-bottom: 50px;
-    position: relative; }
-    #team .teamPic img:hover {
-      opacity: 0.5; }
+    margin: 25px;
+    position: relative;
+    display: inline-block; }
 
-.teamText {
+h3 {
+  opacity: 0;
+  /* display on hover */
   position: absolute;
   top: calc(50% - 9.5px);
   right: 0;
   bottom: 0;
-  left: 0;
-  z-index: -1000; }
+  left: 0; }
+
+.teamPic:hover .picText {
+  opacity: 1; }
+
+.teamPic:hover img {
+  opacity: 0.5; }
 
 /* ---------- GROOMING ---------- */
 #pricing-grooming {
@@ -202,7 +229,8 @@ nav {
     font-size: 1.2em; }
     @media (min-width: 480px) {
       #pricing-grooming h2 {
-        font-size: 1.5em; } }
+        font-size: 1.5em;
+        /* back to default */ } }
   #pricing-grooming p {
     padding: 0; }
   #pricing-grooming .desc {

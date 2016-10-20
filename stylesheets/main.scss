@@ -16,10 +16,6 @@ $hamburger-layer-color: #cc6666;
   list-style: none; // lists
 }
 
-.hide {
-  overflow: hidden;
-}
-
 /* ---------- LINKS ---------- */
 a:link {
   color: #000;
@@ -59,6 +55,12 @@ a:active {
 /* ---------- NAV ---------- */
 nav {
   text-align: center;
+  margin: 20px 10px 0px 0px;
+
+  @media (min-width: 768px) {
+    margin-top: 30px;
+    float: right;
+  }
 
   .menu-main {
     display: none;
@@ -67,18 +69,14 @@ nav {
       display: block;
     }
 
-    ul {
-
-    }
-
     li {
       display: inline-block;
-      padding: 20px;
+      padding: 15px;
     }
 
     a {
       font-weight: 400;
-      font-size: 1.4em;
+      font-size: 1.3em;
     }
   }
 
@@ -112,14 +110,15 @@ nav {
         font-size: 1.4em;
       }
     }
-  } // end menu-overlay
-} // end nav
+  } /* end .menu-overlay */
+} /* end nav */
 
 .current-link {
   border-bottom: 1px solid #cc6666;
 }
 
 .mobileNavBar {
+  display: inline-block;
   height: 58px;
 
    @media (min-width: 480px) {
@@ -143,8 +142,29 @@ nav {
 }
 
 /* ---------- PAGES GENERAL ---------- */
+.logo-mobile {
+  display: inline-block;
+
+  @media (min-width: 480px) {
+    display: none;
+  }
+}
+
+.logo-desktop {
+  display: none;
+
+  @media (min-width: 480px) {
+    display: block;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    display: inline-block;
+  }
+}
+
 .main-page {
-  min-height: 500px; // change back to 500
+  min-height: 500px;
   background: linear-gradient(to bottom, rgba(255,204,153,0), rgba(255,204,153,1));
   padding-bottom: 100px; // WHAT THE FUCKKKK
 
@@ -168,23 +188,27 @@ nav {
   margin-top: 50px;
 
   .teamPic {
-    margin-bottom: 50px;
+    margin: 25px;
     position: relative;
-
-    img:hover {
-      opacity: 0.5;
-    }
+    display: inline-block;
   }
 }
 
-.teamText {
-  //opacity: 0; // display on hover
+h3 {
+  opacity: 0; /* display on hover */
   position: absolute;
-  top: calc(50% - 9.5px); // 9.5px is half of 19px = H3
+  top: calc(50% - 9.5px);
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: -1000;
+}
+
+.teamPic:hover .picText {
+  opacity: 1
+}
+
+.teamPic:hover img {
+  opacity: 0.5;
 }
 
 /* ---------- GROOMING ---------- */
@@ -204,7 +228,7 @@ nav {
     font-size: 1.2em;
 
     @media (min-width: 480px) {
-      font-size: 1.5em; // back to default
+      font-size: 1.5em; /* back to default */
     }
   }
 
@@ -286,7 +310,6 @@ nav {
     max-width: 750px;
    }
 }
-
 
 footer {
   background-color: #ffcc99;
