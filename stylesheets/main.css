@@ -70,6 +70,10 @@
   text-decoration: none;
   list-style: none; }
 
+.hide {
+  /* jquery added class - keeps background from scrolling when overlay menu is visible */
+  overflow: hidden; }
+
 /* ---------- LINKS ---------- */
 a:link {
   color: #000; }
@@ -84,8 +88,9 @@ a:active {
   color: #000; }
 
 /* ---------- BANNERS ---------- */
-#banner-home, #banner-grooming, #banner-shop {
+#banner-home, #banner-grooming, #banner-shop, #banner-events {
   height: 350px;
+  margin-top: 84px;
   background-image: url("../images/dog2.png");
   background-size: cover;
   background-position: center; }
@@ -97,8 +102,12 @@ a:active {
   background-image: url("../images/bird2.png");
   background-position: right; }
 
+#banner-events {
+  background-image: url("../images/collage.png"); }
+
 /* ---------- NAV ---------- */
 nav {
+  /* tablet/desktop/mobile overlay */
   text-align: center;
   margin: 20px 10px 0px 0px;
   /* end .menu-overlay */ }
@@ -141,19 +150,25 @@ nav {
 .current-link {
   border-bottom: 1px solid #cc6666; }
 
-.mobileNavBar {
+.fixedNav {
+  background-color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000; }
+
+.nav-mobile {
   display: inline-block;
   height: 58px; }
   @media (min-width: 480px) {
-    .mobileNavBar {
+    .nav-mobile {
       display: none; } }
-
-.hamburger {
-  position: absolute;
-  right: 10px; }
-  @media (min-width: 480px) {
-    .hamburger {
-      display: none; } }
+  .nav-mobile .hamburger {
+    position: absolute;
+    right: 10px; }
+    @media (min-width: 480px) {
+      .nav-mobile .hamburger {
+        display: none; } }
 
 .is-active {
   position: absolute;
@@ -200,20 +215,29 @@ nav {
     position: relative;
     display: inline-block; }
 
+#management {
+  display: block; }
+
 h3 {
   opacity: 0;
   /* display on hover */
   position: absolute;
-  top: calc(50% - 9.5px);
+  top: calc(50% - 12px);
+  /* vertically centers text */
   right: 0;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  font-weight: 400; }
 
 .teamPic:hover .picText {
   opacity: 1; }
 
 .teamPic:hover img {
   opacity: 0.5; }
+
+#heweyDewey h3 {
+  top: calc(50% - 24px);
+  /* vertically centers 2 lines of text */ }
 
 /* ---------- GROOMING ---------- */
 #pricing-grooming {

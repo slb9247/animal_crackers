@@ -16,6 +16,10 @@ $hamburger-layer-color: #cc6666;
   list-style: none; // lists
 }
 
+.hide { /* jquery added class - keeps background from scrolling when overlay menu is visible */
+  overflow: hidden;
+}
+
 /* ---------- LINKS ---------- */
 a:link {
   color: #000;
@@ -36,6 +40,7 @@ a:active {
 /* ---------- BANNERS ---------- */
 #banner-home {
   height: 350px;
+  margin-top: 84px;
   background-image: url('../images/dog2.png');
   background-size: cover;
   background-position: center;
@@ -52,8 +57,13 @@ a:active {
   background-position: right;
 }
 
+#banner-events {
+  @extend #banner-home;
+  background-image: url('../images/collage.png');
+}
+
 /* ---------- NAV ---------- */
-nav {
+nav { /* tablet/desktop/mobile overlay */
   text-align: center;
   margin: 20px 10px 0px 0px;
 
@@ -117,21 +127,29 @@ nav {
   border-bottom: 1px solid #cc6666;
 }
 
-.mobileNavBar {
+.fixedNav {
+  background-color: rgba(255,255,255,1); // change when scrolling?
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-mobile {
   display: inline-block;
   height: 58px;
+
+  @media (min-width: 480px) {
+    display: none;
+   }
+
+ .hamburger {
+   position: absolute;
+   right: 10px;
 
    @media (min-width: 480px) {
      display: none;
    }
-}
-
-.hamburger {
-  position: absolute;
-  right: 10px;
-
-  @media (min-width: 480px) {
-    display: none;
   }
 }
 
@@ -194,13 +212,18 @@ nav {
   }
 }
 
+#management {
+  display: block;
+}
+
 h3 {
   opacity: 0; /* display on hover */
   position: absolute;
-  top: calc(50% - 9.5px);
+  top: calc(50% - 12px); /* vertically centers text */
   right: 0;
   bottom: 0;
   left: 0;
+  font-weight: 400;
 }
 
 .teamPic:hover .picText {
@@ -209,6 +232,10 @@ h3 {
 
 .teamPic:hover img {
   opacity: 0.5;
+}
+
+#heweyDewey h3 {
+  top: calc(50% - 24px); /* vertically centers 2 lines of text */
 }
 
 /* ---------- GROOMING ---------- */
