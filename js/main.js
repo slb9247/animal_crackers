@@ -7,10 +7,21 @@ $(document).on('ready', function() {
       $('body').toggleClass('hide');
     });
 
+  /* navbar scroll */
+    $(window).bind('scroll', function() {
+      var distance = 100;
+
+      if ($(window).scrollTop() > distance) {
+        $('.fixedNav').addClass('scrolled');
+      }
+      else {
+        $('.fixedNav').removeClass('scrolled');
+      }
+    });
+
+
     // if($('.hamburger').css('display') == 'none') {
     //   $('.menu-overlay').fadeOut('slow');
     // }
-
-
 
 }); // end doc.ready
