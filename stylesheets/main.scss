@@ -63,7 +63,11 @@ a:active {
 
 #banner-events {
   @extend #banner-home;
-  background-image: url('../images/collage.png');
+  background-image: url('../images/collage2_small.png');
+
+  @media (min-width: 768px) {
+    background-image: url('../images/collage2.png');
+  }
 }
 
 /* ---------- NAV ---------- */
@@ -314,6 +318,9 @@ h3 {
 
 
 /* ---------- EVENTS ---------- */
+#body-events {
+  background-color: #ffcc99;
+}
 
 /* ---------- CONTACT/FOOTER ---------- */
 #footer-extras {

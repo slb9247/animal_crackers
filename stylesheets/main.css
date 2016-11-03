@@ -106,7 +106,10 @@ a:active {
   background-position: right; }
 
 #banner-events {
-  background-image: url("../images/collage.png"); }
+  background-image: url("../images/collage2_small.png"); }
+  @media (min-width: 768px) {
+    #banner-events {
+      background-image: url("../images/collage2.png"); } }
 
 /* ---------- NAV ---------- */
 .fixedNav {
@@ -294,6 +297,9 @@ h3 {
 
 /* ---------- SHOP ---------- */
 /* ---------- EVENTS ---------- */
+#body-events {
+  background-color: #ffcc99; }
+
 /* ---------- CONTACT/FOOTER ---------- */
 #footer-extras {
   background-color: rgba(255, 204, 153, 0.5);
