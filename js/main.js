@@ -20,6 +20,7 @@ $(document).on('ready', function() {
     });
 
 
+
     // if($('.hamburger').css('display') == 'none') {
     //   $('.menu-overlay').fadeOut('slow');
     // }

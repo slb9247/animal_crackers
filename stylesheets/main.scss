@@ -251,6 +251,14 @@ h3 {
 }
 
 /* ---------- GROOMING ---------- */
+#slides {
+  display: none;
+}
+
+.container {
+  width: auto;
+}
+
 #pricing-grooming {
   text-align: center;
   margin-top: 50px;
@@ -307,7 +315,6 @@ h3 {
 
 /* ---------- EVENTS ---------- */
 
-
 /* ---------- CONTACT/FOOTER ---------- */
 #footer-extras {
   background-color: rgba(255,204,153,0.5);
@@ -355,4 +362,8 @@ footer {
   text-align: center;
   padding: 15px 0px;
   font-size: 0.75em;
+}
+
+#portfolio {
+  color: #cc6666;
 }

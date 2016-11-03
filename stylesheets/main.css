@@ -251,6 +251,12 @@ h3 {
   /* vertically centers 2 lines of text */ }
 
 /* ---------- GROOMING ---------- */
+#slides {
+  display: none; }
+
+.container {
+  width: auto; }
+
 #pricing-grooming {
   text-align: center;
   margin-top: 50px;
@@ -323,5 +329,8 @@ footer {
   text-align: center;
   padding: 15px 0px;
   font-size: 0.75em; }
+
+#portfolio {
+  color: #cc6666; }
 
 /*# sourceMappingURL=main.css.map */
