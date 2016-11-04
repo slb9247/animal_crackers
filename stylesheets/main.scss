@@ -57,8 +57,12 @@ a:active {
 
 #banner-shop {
   @extend #banner-home;
-  background-image: url('../images/bird2.png');
+  background-image: url('../images/gecko2_small.png');
   background-position: right;
+
+  @media (min-width: 480px) {
+    background-image: url('../images/gecko2.png');
+  }
 }
 
 #banner-events {
@@ -350,9 +354,14 @@ h3 {
   padding: 15px 0px;
   text-align: center;
 
-  #number {
-    margin-bottom: 10px;
+  #number,
+  #facebook {
+    margin-bottom: 15px;
   }
+}
+
+#facebook a {
+  color: #cc6666;
 }
 
 #map {

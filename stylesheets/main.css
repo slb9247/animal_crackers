@@ -102,8 +102,11 @@ a:active {
   background-image: url("../images/cat2.png"); }
 
 #banner-shop {
-  background-image: url("../images/bird2.png");
+  background-image: url("../images/gecko2_small.png");
   background-position: right; }
+  @media (min-width: 480px) {
+    #banner-shop {
+      background-image: url("../images/gecko2.png"); } }
 
 #banner-events {
   background-image: url("../images/collage2_small.png"); }
@@ -321,8 +324,12 @@ h3 {
   font-weight: 400;
   padding: 15px 0px;
   text-align: center; }
-  #contact #number {
-    margin-bottom: 10px; }
+  #contact #number,
+  #contact #facebook {
+    margin-bottom: 15px; }
+
+#facebook a {
+  color: #cc6666; }
 
 #map {
   text-align: center;
