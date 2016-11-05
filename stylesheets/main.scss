@@ -221,6 +221,41 @@ nav { /* tablet/desktop/mobile overlay */
 }
 
 /* ---------- HOME ---------- */
+.modal-overlay {
+  display: none;
+  background-color: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000000;
+
+  .modal {
+    width: 70%;
+    min-height: 200px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); // vertically centered
+    padding: 30px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+
+    @media (min-width: 480px) {
+      width: 350px;
+    }
+  }
+}
+
+.btn {
+  float: right;
+  border-radius: 10px;
+  border: none;
+  font-size: 20px;
+  background-color: white;
+}
+
 #team {
   text-align: center;
   margin-top: 50px;
@@ -232,11 +267,7 @@ nav { /* tablet/desktop/mobile overlay */
   }
 }
 
-#management {
-  display: block;
-}
-
-h3 {
+.picText {
   opacity: 0; /* display on hover */
   position: absolute;
   top: calc(50% - 12px); /* vertically centers text */
@@ -244,6 +275,10 @@ h3 {
   bottom: 0;
   left: 0;
   font-weight: 400;
+}
+
+#management {
+  display: block;
 }
 
 .teamPic:hover .picText {
@@ -259,13 +294,74 @@ h3 {
 }
 
 /* ---------- GROOMING ---------- */
-#slides {
-  display: none;
+/* responsiveSlides slideshow plugin */
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 90%;
+
+  @media (min-width: 768px) {
+    max-width: 735px;
+  }
 }
 
-.container {
-  width: auto;
+.rslides li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+}
+// .slideshow {
+//   text-align: center;
+//   position: relative;
+// }
+//
+// #slides {
+//   display: inline-block;
+//   position: relative;
+//   width: 90%;
+//
+//   img {
+//     display: none;
+//     width: 100%;
+//
+//     @media (min-width: 768px) {
+//       max-width: 735px;
+//     }
+//   }
+// }
+//
+// #btn-prev {
+//   background-color: rgba(255,255,255,0.5);
+//   //width: 7%;
+//   width: 50px;
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%); // vertically centered
+//   z-index: 10;
+// }
+//
+// #btn-next {
+//   @extend #btn-prev;
+//   // right: 0px;
+// }
 
 #pricing-grooming {
   text-align: center;
