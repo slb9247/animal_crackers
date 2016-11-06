@@ -287,6 +287,9 @@ nav {
   /* vertically centers 2 lines of text */ }
 
 /* ---------- GROOMING ---------- */
+#main-grooming p:nth-child(6) {
+  margin-bottom: 50px; }
+
 /* responsiveSlides slideshow plugin */
 .rslides {
   position: relative;
@@ -317,6 +320,7 @@ nav {
   width: 100%;
   border: 0; }
 
+/* end plugin */
 #pricing-grooming {
   text-align: center;
   margin-top: 50px;
@@ -352,6 +356,7 @@ nav {
     #pricing-grooming .prices span {
       float: right; }
 
+/* end #pricing-grooming */
 /* ---------- SHOP ---------- */
 /* ---------- EVENTS ---------- */
 #body-events {
@@ -397,7 +402,7 @@ footer {
   padding: 15px 0px;
   font-size: 0.75em; }
 
-#portfolio {
+#portfolioSite {
   color: #cc6666; }
 
 /*# sourceMappingURL=main.css.map */
