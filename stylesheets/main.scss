@@ -117,10 +117,10 @@ a:active {
 
 nav { /* tablet/desktop/mobile overlay */
   text-align: center;
-  margin: 20px 10px 0px 0px;
+  margin: 20px 0px 0px 0px;
 
   @media (min-width: 768px) {
-    margin-top: 30px;
+    margin: 30px 10px 0px 0px;
     float: right;
   }
 
@@ -204,7 +204,7 @@ nav { /* tablet/desktop/mobile overlay */
 .main-page {
   min-height: 500px;
   background: linear-gradient(to bottom, rgba(255,204,153,0), rgba(255,204,153,1));
-  padding-bottom: 100px; // WHAT THE FUCKKKK
+  padding-bottom: 100px;
 
   h1 {
     font-weight: 700;
@@ -248,7 +248,8 @@ nav { /* tablet/desktop/mobile overlay */
   }
 }
 
-.btn {
+.btn-close {
+  cursor: pointer;
   float: right;
   border-radius: 10px;
   border: none;
@@ -256,11 +257,17 @@ nav { /* tablet/desktop/mobile overlay */
   background-color: white;
 }
 
+#modal-head {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
 #team {
   text-align: center;
   margin-top: 50px;
 
   .teamPic {
+    cursor: pointer;
     margin: 25px;
     position: relative;
     display: inline-block;
@@ -395,7 +402,8 @@ nav { /* tablet/desktop/mobile overlay */
 
 /* ---------- CONTACT/FOOTER ---------- */
 #footer-extras {
-  background-color: rgba(255,204,153,0.5);
+  //background-color: rgba(255,204,153,0.5);
+  background-color: #ffe6cc;
   min-height: 500px;
 }
 

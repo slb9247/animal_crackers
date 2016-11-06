@@ -21,14 +21,11 @@ $(document).on('ready', function() {
 
   /* home page modals */
   var trigger;
-  var modalContent;
 
   $('.teamPic').on('click', function() {
       trigger = $(this).attr('id');
       setModalContent();
-      //$('.modal-overlay').show();
       $('.modal-overlay').show();
-
   });
 
   function setModalContent() {
@@ -68,6 +65,9 @@ $(document).on('ready', function() {
     }
   };
 
+  $('.btn-close').on('click', function() {
+      $('.modal-overlay').hide();
+  });
 
 
 

@@ -150,11 +150,11 @@ a:active {
 nav {
   /* tablet/desktop/mobile overlay */
   text-align: center;
-  margin: 20px 10px 0px 0px;
+  margin: 20px 0px 0px 0px;
   /* end .menu-overlay */ }
   @media (min-width: 768px) {
     nav {
-      margin-top: 30px;
+      margin: 30px 10px 0px 0px;
       float: right; } }
   nav .menu-main {
     display: none; }
@@ -247,17 +247,23 @@ nav {
       .modal-overlay .modal {
         width: 350px; } }
 
-.btn {
+.btn-close {
+  cursor: pointer;
   float: right;
   border-radius: 10px;
   border: none;
   font-size: 20px;
   background-color: white; }
 
+#modal-head {
+  margin-bottom: 10px;
+  font-weight: 500; }
+
 #team {
   text-align: center;
   margin-top: 50px; }
   #team .teamPic {
+    cursor: pointer;
     margin: 25px;
     position: relative;
     display: inline-block; }
@@ -364,7 +370,7 @@ nav {
 
 /* ---------- CONTACT/FOOTER ---------- */
 #footer-extras {
-  background-color: rgba(255, 204, 153, 0.5);
+  background-color: #ffe6cc;
   min-height: 500px; }
 
 #hours {
