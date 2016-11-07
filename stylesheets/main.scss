@@ -16,7 +16,7 @@ $hamburger-layer-color: #cc6666;
   list-style: none; // lists
 }
 
-.hide { /* jquery added class - keeps background from scrolling when overlay menu is visible */
+.hide { /* jquery added class - keeps background from scrolling */
   overflow: hidden;
 }
 
@@ -86,6 +86,7 @@ a:active {
   position: fixed;
   top: 0;
   z-index: 1000;
+  -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
 
   @media (min-width: 480px) {
@@ -106,6 +107,7 @@ a:active {
   display: inline-block;
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%); // vertically centered
   right: 10px;
   padding: 0;
@@ -118,10 +120,9 @@ a:active {
 .is-active {
   position: absolute;
   right: 10px;
-  //z-index: 999;
 }
 
-nav { /* tablet/desktop/mobile overlay */
+nav {
   text-align: center;
   margin: 20px 0px 0px 0px;
 
@@ -155,7 +156,7 @@ nav { /* tablet/desktop/mobile overlay */
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #cc9966; //rgba(255,255,255,0.5);
+    background-color: #cc9966;
     z-index: 900;
 
     @media (min-width: 480px) {
@@ -165,7 +166,8 @@ nav { /* tablet/desktop/mobile overlay */
     .menu-overlayContent {
       position: relative;
       top: 50%;
-      transform: translateY(-50%); // vertically centered
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%); /* vertically centered*/
 
       li {
         padding: 20px;
@@ -206,6 +208,7 @@ nav { /* tablet/desktop/mobile overlay */
 
 .main-page {
   min-height: 500px;
+  background: -webkit-linear-gradient(top, rgba(255,204,153,0), rgba(255,204,153,1));
   background: linear-gradient(to bottom, rgba(255,204,153,0), rgba(255,204,153,1));
   padding-bottom: 100px;
 
@@ -240,7 +243,8 @@ nav { /* tablet/desktop/mobile overlay */
     overflow: scroll;
     position: relative;
     top: 50%;
-    transform: translateY(-50%); // vertically centered
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); /* vertically centered*/
     padding: 30px;
     margin: 0 auto;
     background-color: white;
@@ -284,7 +288,8 @@ nav { /* tablet/desktop/mobile overlay */
   @media (min-width: 768px) {
     opacity: 0; /* display on hover */
     top: 50%;
-    transform: translateY(-50%); // vertically centered
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); /* vertically centered*/
     position: absolute;
     right: 0;
     left: 0;
@@ -313,8 +318,9 @@ nav { /* tablet/desktop/mobile overlay */
 
   @media (min-width: 768px) {
     top: 50%;
-    transform: translateY(-50%); // vertically centered
-  }  
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%); /* vertically centered*/
+  }
 }
 
 /* ---------- GROOMING ---------- */
