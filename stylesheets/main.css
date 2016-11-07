@@ -298,9 +298,10 @@ nav {
   .teamPic:hover img {
     opacity: 0.5; } }
 
-#heweyDewey h3 {
-  top: 50%;
-  transform: translateY(-50%); }
+@media (min-width: 768px) {
+  #heweyDewey h3 {
+    top: 50%;
+    transform: translateY(-50%); } }
 
 /* ---------- GROOMING ---------- */
 #main-grooming p:nth-child(6) {

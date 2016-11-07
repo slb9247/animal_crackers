@@ -310,8 +310,11 @@ nav { /* tablet/desktop/mobile overlay */
 }
 
 #heweyDewey h3 {
-  top: 50%;
-  transform: translateY(-50%); // vertically centered
+
+  @media (min-width: 768px) {
+    top: 50%;
+    transform: translateY(-50%); // vertically centered
+  }  
 }
 
 /* ---------- GROOMING ---------- */
