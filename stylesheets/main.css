@@ -91,15 +91,19 @@ a:active {
 #banner-home, #banner-grooming, #banner-shop, #banner-events {
   height: 350px;
   margin-top: 84px;
-  background-image: url("../images/dog2.png");
+  background-image: url("../images/dog2_small.png");
   background-size: cover;
   background-position: center; }
   @media (min-width: 480px) {
     #banner-home, #banner-grooming, #banner-shop, #banner-events {
-      margin-top: 0; } }
+      margin-top: 0;
+      background-image: url("../images/dog2.png"); } }
 
 #banner-grooming {
-  background-image: url("../images/groom_dog2.png"); }
+  background-image: url("../images/groom_dog2_small.png"); }
+  @media (min-width: 480px) {
+    #banner-grooming {
+      background-image: url("../images/groom_dog2.png"); } }
 
 #banner-shop {
   background-image: url("../images/gecko2_small.png");
@@ -136,7 +140,8 @@ a:active {
 .hamburger {
   display: inline-block;
   position: absolute;
-  top: calc(50% - 12px);
+  top: 50%;
+  transform: translateY(-50%);
   right: 10px;
   padding: 0; }
   @media (min-width: 480px) {
@@ -182,7 +187,8 @@ nav {
         display: none !important; } }
     nav .menu-overlay .menu-overlayContent {
       position: relative;
-      top: calc(50% - 138px); }
+      top: 50%;
+      transform: translateY(-50%); }
       nav .menu-overlay .menu-overlayContent li {
         padding: 20px; }
       nav .menu-overlay .menu-overlayContent a {
@@ -235,7 +241,8 @@ nav {
   z-index: 1000000; }
   .modal-overlay .modal {
     width: 70%;
-    min-height: 200px;
+    height: 200px;
+    overflow: scroll;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -269,28 +276,31 @@ nav {
     display: inline-block; }
 
 .picText {
-  opacity: 0;
-  /* display on hover */
-  position: absolute;
-  top: calc(50% - 12px);
-  /* vertically centers text */
-  right: 0;
-  bottom: 0;
-  left: 0;
   font-weight: 400; }
+  @media (min-width: 768px) {
+    .picText {
+      opacity: 0;
+      /* display on hover */
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      right: 0;
+      left: 0; } }
 
 #management {
   display: block; }
 
-.teamPic:hover .picText {
-  opacity: 1; }
+@media (min-width: 768px) {
+  .teamPic:hover .picText {
+    opacity: 1; } }
 
-.teamPic:hover img {
-  opacity: 0.5; }
+@media (min-width: 768px) {
+  .teamPic:hover img {
+    opacity: 0.5; } }
 
 #heweyDewey h3 {
-  top: calc(50% - 24px);
-  /* vertically centers 2 lines of text */ }
+  top: 50%;
+  transform: translateY(-50%); }
 
 /* ---------- GROOMING ---------- */
 #main-grooming p:nth-child(6) {

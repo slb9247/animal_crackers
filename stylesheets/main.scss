@@ -41,18 +41,23 @@ a:active {
 #banner-home {
   height: 350px;
   margin-top: 84px;
-  background-image: url('../images/dog2.png');
+  background-image: url('../images/dog2_small.png');
   background-size: cover;
   background-position: center;
 
   @media (min-width: 480px) {
     margin-top: 0;
+    background-image: url('../images/dog2.png');
   }
 }
 
 #banner-grooming {
   @extend #banner-home;
-  background-image: url('../images/groom_dog2.png');
+  background-image: url('../images/groom_dog2_small.png');
+
+  @media (min-width: 480px) {
+    background-image: url('../images/groom_dog2.png');
+  }
 }
 
 #banner-shop {
@@ -100,7 +105,8 @@ a:active {
 .hamburger {
   display: inline-block;
   position: absolute;
-  top: calc(50% - 12px);
+  top: 50%;
+  transform: translateY(-50%); // vertically centered
   right: 10px;
   padding: 0;
 
@@ -158,11 +164,8 @@ nav { /* tablet/desktop/mobile overlay */
 
     .menu-overlayContent {
       position: relative;
-      top: calc(50% - 138px);
-
-      ul {
-
-      }
+      top: 50%;
+      transform: translateY(-50%); // vertically centered
 
       li {
         padding: 20px;
@@ -233,7 +236,8 @@ nav { /* tablet/desktop/mobile overlay */
 
   .modal {
     width: 70%;
-    min-height: 200px;
+    height: 200px;
+    overflow: scroll;
     position: relative;
     top: 50%;
     transform: translateY(-50%); // vertically centered
@@ -275,13 +279,16 @@ nav { /* tablet/desktop/mobile overlay */
 }
 
 .picText {
-  opacity: 0; /* display on hover */
-  position: absolute;
-  top: calc(50% - 12px); /* vertically centers text */
-  right: 0;
-  bottom: 0;
-  left: 0;
   font-weight: 400;
+
+  @media (min-width: 768px) {
+    opacity: 0; /* display on hover */
+    top: 50%;
+    transform: translateY(-50%); // vertically centered
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
 }
 
 #management {
@@ -289,15 +296,22 @@ nav { /* tablet/desktop/mobile overlay */
 }
 
 .teamPic:hover .picText {
-  opacity: 1;
+
+  @media (min-width: 768px) {
+    opacity: 1;
+  }
 }
 
 .teamPic:hover img {
-  opacity: 0.5;
+
+  @media (min-width: 768px) {
+    opacity: 0.5;
+  }
 }
 
 #heweyDewey h3 {
-  top: calc(50% - 24px); /* vertically centers 2 lines of text */
+  top: 50%;
+  transform: translateY(-50%); // vertically centered
 }
 
 /* ---------- GROOMING ---------- */
@@ -402,7 +416,6 @@ nav { /* tablet/desktop/mobile overlay */
 
 /* ---------- CONTACT/FOOTER ---------- */
 #footer-extras {
-  //background-color: rgba(255,204,153,0.5);
   background-color: #ffe6cc;
   min-height: 500px;
 }

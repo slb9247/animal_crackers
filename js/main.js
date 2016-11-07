@@ -1,7 +1,7 @@
 $(document).on('ready', function() {
 
   /* hamburger menu */
-    $('.hamburger, .menu-overlay').on('click', function() {
+    $('.hamburger').on('click', function() {
       $('.hamburger').toggleClass('is-active');
       $('.menu-overlay').fadeToggle(200);
       $('body').toggleClass('hide');
@@ -26,6 +26,7 @@ $(document).on('ready', function() {
       trigger = $(this).attr('id');
       setModalContent();
       $('.modal-overlay').show();
+      $('body').addClass('hide');
   });
 
   function setModalContent() {
@@ -67,6 +68,7 @@ $(document).on('ready', function() {
 
   $('.btn-close').on('click', function() {
       $('.modal-overlay').hide();
+      $('body').removeClass('hide');
   });
 
 
