@@ -68,6 +68,11 @@ a:active {
   @media (min-width: 480px) {
     background-image: url('../images/gecko2.png');
   }
+
+  @media (min-width: 1024px) {
+    background-image: url('../images/gecko2_big.png');
+    background-position: top;
+  }
 }
 
 #banner-events {
@@ -108,7 +113,7 @@ a:active {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%); // vertically centered
+  transform: translateY(-50%); /* vertically centered */
   right: 10px;
   padding: 0;
 
@@ -167,7 +172,7 @@ nav {
       position: relative;
       top: 50%;
       -webkit-transform: translateY(-50%);
-      transform: translateY(-50%); /* vertically centered*/
+      transform: translateY(-50%); /* vertically centered */
 
       li {
         padding: 20px;
@@ -244,7 +249,7 @@ nav {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%); /* vertically centered*/
+    transform: translateY(-50%); /* vertically centered */
     padding: 30px;
     margin: 0 auto;
     background-color: white;
@@ -289,7 +294,7 @@ nav {
     opacity: 0; /* display on hover */
     top: 50%;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%); /* vertically centered*/
+    transform: translateY(-50%); /* vertically centered */
     position: absolute;
     right: 0;
     left: 0;
@@ -319,7 +324,7 @@ nav {
   @media (min-width: 768px) {
     top: 50%;
     -webkit-transform: translateY(-50%);
-    transform: translateY(-50%); /* vertically centered*/
+    transform: translateY(-50%); /* vertically centered */
   }
 }
 
@@ -361,8 +366,8 @@ nav {
   float: left;
   width: 100%;
   border: 0;
-}
-/* end plugin */
+} /* end plugin */
+
 
 #pricing-grooming {
   text-align: center;
@@ -391,7 +396,7 @@ nav {
   .desc {
     padding: 0;
     font-size: 0.9em;
-    font-weight: 200;
+    font-weight: 400;
   }
 
   .prices {
@@ -418,10 +423,53 @@ nav {
 /* ---------- SHOP ---------- */
 
 
-/* ---------- EVENTS ---------- */
+/* ---------- GALLERY/EVENTS ---------- */
 #body-events {
   background-color: #ffcc99;
 }
+
+#paintings {
+  text-align: center;
+  margin-top: 50px;
+  padding: 0px 20px 50px;
+  max-width: 450px;
+
+  h2 {
+    text-align: left;
+    font-weight: 400;
+    font-size: 1.2em;
+
+    @media (min-width: 480px) {
+      font-size: 1.5em; /* back to default */
+    }
+  }
+
+  #paintDesc {
+    padding: 0;
+    font-size: 0.9em;
+    font-weight: 400;
+  }
+
+  #paintPrices {
+    margin-top: 20px;
+    font-size: 0.875em;
+    font-weight: 400;
+
+    @media (min-width: 480px) {
+      font-size: 1em;
+    }
+
+    li {
+      text-align: left;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #cc6666;
+    }
+
+    span {
+      float: right;
+    }
+  }
+} /* end #pricing-grooming */
 
 /* ---------- CONTACT/FOOTER ---------- */
 #footer-extras {
