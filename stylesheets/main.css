@@ -270,12 +270,18 @@ nav {
   float: right;
   border-radius: 10px;
   border: none;
-  font-size: 20px;
+  font-size: 1.25em;
   background-color: white; }
 
 #modal-head {
   margin-bottom: 10px;
   font-weight: 500; }
+
+#paintIntro {
+  text-align: center;
+  font-size: 1.25em; }
+  #paintIntro a {
+    color: #cc6666; }
 
 #team {
   text-align: center;
@@ -425,7 +431,23 @@ nav {
     #paintings #paintPrices span {
       float: right; }
 
-/* end #pricing-grooming */
+#events {
+  text-align: center;
+  padding: 0px 20px 50px;
+  max-width: 450px; }
+  #events h2 {
+    text-align: left;
+    font-weight: 400;
+    font-size: 1.2em; }
+    @media (min-width: 480px) {
+      #events h2 {
+        font-size: 1.5em;
+        /* back to default */ } }
+  #events #eventDesc {
+    padding: 0;
+    font-size: 0.9em;
+    font-weight: 400; }
+
 /* ---------- CONTACT/FOOTER ---------- */
 #footer-extras {
   background-color: #ffe6cc;
