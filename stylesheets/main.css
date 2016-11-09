@@ -449,6 +449,12 @@ nav {
     font-size: 0.9em;
     font-weight: 400; }
 
+.offset::before {
+  display: block;
+  content: '';
+  height: 80px;
+  margin-top: -80px; }
+
 /* ---------- CONTACT/FOOTER ---------- */
 #footer-extras {
   background-color: #ffe6cc;
