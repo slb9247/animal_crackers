@@ -445,6 +445,7 @@ nav {
         /* back to default */ } }
   #events #eventDesc {
     padding: 0;
+    margin-top: 20px;
     font-size: 0.9em;
     font-weight: 400; }
 
