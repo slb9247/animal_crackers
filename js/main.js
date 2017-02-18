@@ -73,7 +73,7 @@ $(document).on('ready', function() {
 
 
 
-  /* grooming page slideshow */
+  /* slideshows */
     $(function() {
       $(".rslides").responsiveSlides();
     });

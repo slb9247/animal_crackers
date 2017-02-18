@@ -342,10 +342,10 @@ nav {
   margin-bottom: 50px;
 }
 
+
 /* responsiveSlides slideshow plugin */
 .rslides {
   position: relative;
-  list-style: none;
   overflow: hidden;
   width: 90%;
 
@@ -366,13 +366,11 @@ nav {
 .rslides li:first-child {
   position: relative;
   display: block;
-  float: left;
 }
 
 .rslides img {
   display: block;
   height: auto;
-  float: left;
   width: 100%;
   border: 0;
 } /* end plugin */
@@ -508,7 +506,16 @@ nav {
   content: '';
   height: 80px;
   margin-top: -80px;
+
+  @media (min-width: 480px) {
+    height: 0;
+    margin-top: 0;
+  }
 }
+
+
+/* responsiveSlides slideshow plugin - line 346 */
+
 
 /* ---------- CONTACT/FOOTER ---------- */
 #footer-extras {
