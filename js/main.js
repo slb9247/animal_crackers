@@ -36,9 +36,6 @@ $(document).on('ready', function() {
     } else if (trigger === "bill") {
       document.getElementById("modal-head").innerHTML = "Meet Bill";
       document.getElementById("modal-para").innerHTML = "Bill is a nine-year-old standard poodle typically down mingling in the shop. I adopted him as a puppy mill rescue when he was just 11 months old. Poor Bill was a smelly matted mess when him and several other poodles were rescued, but I could see his big heart and gentle behavior in him and I was sold.";
-    } else if (trigger === "heweyDewey") {
-      document.getElementById("modal-head").innerHTML = "Meet Hewey and Dewey";
-      document.getElementById("modal-para").innerHTML = "Hewey is a sun conure that came to us in desperate shape. His previous owner, turning to us for help, told us that their new puppy had bitten off Hewey’s beak. Unfortunately, birds are unable to grow back their beaks if they are broken too far back, so all of the veterinarians that had been contacted told the poor owner that Hewey’s chance of living was slim and suggested euthanasia. So, in his sad state, I decided we would try our best to rehabilitate him, and now, years later, after creating a special diet catered to his needs, he's just as happy and sassy as ever! <br> <br> His friend, Dewey, helps keep Hewey’s spirits up and the two have since created a bond.";
     } else if (trigger === "gizmo") {
       document.getElementById("modal-head").innerHTML = "Meet Gizmo";
       document.getElementById("modal-para").innerHTML = "Gizmo is a female silver lop-eared rabbit and her best friend Ginger is a male guinea pig.  Gizmo loves all of her piggy friends and you will even catch her grooming them on occasion.";
