@@ -60,15 +60,18 @@ $(document).on('ready', function() {
     } else if (trigger === "kamikaze") {
       document.getElementById("modal-head").innerHTML = "Meet Kamikaze";
       document.getElementById("modal-para").innerHTML = "Our newest guy, who came with no information, was happily dubbed by the Animal Crackers crew as Kamikaze. We believe he is a Hermann’s tortoise.";
-    } else if (trigger === "paco") {
-      document.getElementById("modal-head").innerHTML = "Meet Paco";
-      document.getElementById("modal-para").innerHTML = "Paco is a 15 year old cockatiel. He sits on or near the counter and is always eager to sit on customers' shoulders and whistle.";
     } else if (trigger === "beans") {
       document.getElementById("modal-head").innerHTML = "Meet Beans";
       document.getElementById("modal-para").innerHTML = "This is our pot belly pig. He may be small now, but just wait and see how big he can really get! He can usually be found eating or sleeping behind the counter like most piggies do best.";
     } else if (trigger === "reedyRiblettes") {
       document.getElementById("modal-head").innerHTML = "Meet Reedy and Riblettes";
       document.getElementById("modal-para").innerHTML = "";
+    } else if (trigger === "frank") {
+      document.getElementById("modal-head").innerHTML = "Meet Frank";
+      document.getElementById("modal-para").innerHTML = "Frank is our second pot belly pig. He is very social and loves his belly rubs.";
+    } else if (trigger === "kiwi") {
+      document.getElementById("modal-head").innerHTML = "Meet Kiwi";
+      document.getElementById("modal-para").innerHTML = "Kiwi is a very friendly chinchilla who loves to have her chin scratched. If you do not see her in her cage, she may be out and about rolling around in her ball.";
     }
   };
 
